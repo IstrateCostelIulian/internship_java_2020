@@ -9,18 +9,18 @@ indicatii : folositi loops si operatorul % */
     public static void main(String[] args) {
 
 
-        int myNumbers [] =  { 1,8,5,3,4,9,5,3 };
+        int[] myNumbers =  { 1,8,5,3,4,9,5,3 };
 
         int numbersOdd = 0;
 
 
-        for (int i  = 0; i < myNumbers.length; i++){
-           if ( myNumbers[i] % 2 != 0) {
-               numbersOdd ++;
+        for (int myNumber : myNumbers) {
+            if (myNumber % 2 != 0) {
+                numbersOdd++;
 
-               if (numbersOdd == 1 || numbersOdd == 3) continue;
-           }
-            System.out.println(myNumbers[i]);
+                if (numbersOdd == 1 || numbersOdd == 3) continue;
+            }
+            System.out.println(myNumber);
 
         }
 
