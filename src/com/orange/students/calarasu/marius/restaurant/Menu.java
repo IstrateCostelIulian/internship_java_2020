@@ -60,7 +60,7 @@ public class Menu {
             System.out.println(food);
             total += food.getPrice();
         }
-        System.out.println("Total de plata : " + total);
+        System.out.println("Total de plata : " + total + " ron");
     }
 }
   
