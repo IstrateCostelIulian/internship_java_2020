@@ -1,4 +1,4 @@
-package com.orange.topics.scannerPractice;
+package com.orange.topics.scannerPractice.ex1;
 
 import java.util.ArrayList;
 import java.util.List;

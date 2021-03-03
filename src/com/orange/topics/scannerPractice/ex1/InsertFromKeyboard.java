@@ -1,4 +1,4 @@
-package com.orange.topics.scannerPractice;
+package com.orange.topics.scannerPractice.ex1;
 
 import java.util.Scanner;
 
@@ -9,6 +9,7 @@ public class InsertFromKeyboard {
 
         ShowMessagesUtils.showMessage("Programerul va functiona doar pt 2 elemente ");
         ShowMessagesUtils.showMessage("Alege o operatie de executat : ");
+
         int index = scanner.nextInt();
 
         if (index > ShowMessagesUtils.myMenu().size()) {
@@ -31,15 +32,13 @@ public class InsertFromKeyboard {
                 ShowMessagesUtils.showMessageForOperation("adunare", rezultat);
                 break;
             case 2:
-                // scadere
+                rezultat = MathUtils.scadere(primulElement, alDoileaElement);
                 ShowMessagesUtils.showMessageForOperation("scadere", rezultat);
-                return;
-            //break;
+                break;
             case 3:
-                // inmultire
+                rezultat = MathUtils.inmultire(primulElement, alDoileaElement);
                 ShowMessagesUtils.showMessageForOperation("inmultire", rezultat);
-                return;
-            //break;
+                break;
             case 4:
                 rezultat = MathUtils.impartire(primulElement, alDoileaElement);
                 ShowMessagesUtils.showMessageForOperation("impartire", rezultat);
