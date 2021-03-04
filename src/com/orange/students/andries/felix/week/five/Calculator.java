@@ -1,4 +1,4 @@
-package com.orange.students.andries.felix.Tema3;
+package com.orange.students.andries.felix.week.five;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -49,17 +49,38 @@ public class Calculator {
 
 
     //sa verifice daca un array are numar par de elemente
-    public static void evenNumbers() {
-        int[] myEvenNumbers =  {  10,12,8,6,9,4,5,11};
+    public String evenNumbers() {
 
-        for (int myEvenNumber : myEvenNumbers) {
+        int[] myArray = {50, 60, 25, 32, 15, 35};
+        int numerePare;
 
-            if (myEvenNumber % 2 == 0) {
-                System.out.println(myEvenNumber + " ");
+        for (int j : myArray) {
+
+            if (j % 2 == 0) {
+                System.out.print(j + " ");
             }
         }
 
+     return " ";
+
     }
+
+
+    // * sa verifice daca un array are numar impar de elemente
+    public String oddNumbers() {
+        int[] myArray = { 50, 60, 25, 32, 15, 35};
+
+        for (int j : myArray){
+
+            if (j % 2 != 0){
+                System.out.println(j);
+            }
+        }
+        return " ";
+
+    }
+
+
 
 
 }
