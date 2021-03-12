@@ -1,14 +1,17 @@
 package com.orange.students.andries.felix.week.five.Fruct;
 
-public class Banana extends Fruct {
+public class Mar  extends Fruct {
+
+
+
 
     @Override
     public void getCuloare() {
-        System.out.println("Banana are culoare galbena");
+        System.out.println("Marul are culoare verde");
     }
 
     @Override
     public void getGust() {
-        System.out.println("Banana are gust dulce");
+        System.out.println("Marul are gust acru");
     }
 }

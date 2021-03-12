@@ -1,5 +1,7 @@
 package com.orange.students.andries.felix.week.five;
 
+import com.orange.students.andries.felix.week.five.Fruct.Mar;
+
 public class Main {
 
     public static void main(String[] args) {
@@ -12,15 +14,8 @@ public class Main {
          System.out.println(myCalculator.arrayElement(2));
          System.out.println(myCalculator.evenNumbers());
          System.out.println(myCalculator.oddNumbers());
-
-
-
-
-
-
-
-
-
     }
+
+
 
 }
