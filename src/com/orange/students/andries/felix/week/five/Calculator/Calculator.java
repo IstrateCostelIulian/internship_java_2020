@@ -1,4 +1,4 @@
-package com.orange.students.andries.felix.week.five;
+package com.orange.students.andries.felix.week.five.Calculator;
 
 import java.util.ArrayList;
 import java.util.Arrays;

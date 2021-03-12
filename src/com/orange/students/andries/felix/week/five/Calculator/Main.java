@@ -1,6 +1,6 @@
-package com.orange.students.andries.felix.week.five;
+package com.orange.students.andries.felix.week.five.Calculator;
 
-import com.orange.students.andries.felix.week.five.Fruct.Mar;
+import com.orange.students.andries.felix.week.five.Calculator.Calculator;
 
 public class Main {
 
