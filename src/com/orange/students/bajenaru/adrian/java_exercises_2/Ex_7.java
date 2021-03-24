@@ -13,7 +13,7 @@ public class Ex_7 {
         String[] matrice = {"ab", "cc", "gg", "a", "kg", "ert"};
         for (String string : matrice)
         {
-            if (string.length() <= 1|| >=3 ) {
+            if (string.length() <=1 && >=3 ) {
                 System.out.println(string);
             }
         }
