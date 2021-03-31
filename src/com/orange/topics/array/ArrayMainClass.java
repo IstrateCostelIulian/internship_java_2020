@@ -48,7 +48,5 @@ public class ArrayMainClass {
         for (int intValue : oneDimentionArrayTwo) {
             System.out.print(intValue + " , ");
         }
-
-
     }
 }

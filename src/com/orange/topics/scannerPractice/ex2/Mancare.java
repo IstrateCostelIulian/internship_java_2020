@@ -39,4 +39,12 @@ public class Mancare {
     public int hashCode() {
         return Objects.hash(nume, pret);
     }
+
+    @Override
+    public String toString() {
+        return "Mancare{" +
+                "nume='" + nume + '\'' +
+                ", pret=" + pret +
+                '}';
+    }
 }

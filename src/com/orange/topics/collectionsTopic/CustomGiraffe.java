@@ -55,9 +55,9 @@ public class CustomGiraffe implements Comparable<CustomGiraffe> {
     @Override
     public int compareTo(CustomGiraffe o) {
         if (this.height > o.height) {
-            return -1;
-        } else if (o.height > this.height) {
             return 1;
+        } else if (o.height > this.height) {
+            return -1;
         } else {
             return 0;
         }

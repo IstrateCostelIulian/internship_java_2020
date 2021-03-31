@@ -1,0 +1,6 @@
+test
+Writeable: true
+Readable true
+File size in bytes 4
+
+Process finished with exit code 0

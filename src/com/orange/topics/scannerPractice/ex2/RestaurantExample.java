@@ -2,54 +2,55 @@ package com.orange.topics.scannerPractice.ex2;
 
 import com.orange.topics.scannerPractice.ex1.ShowMessagesUtils;
 
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Map;
 import java.util.Scanner;
-import java.util.Set;
 
 public class RestaurantExample {
 
+    private static List<Mancare> mancareaAleasa = new ArrayList<>();
+
     public static void main(String[] args) {
+
         Scanner scanner = new Scanner(System.in);
 
         ShowMessagesUtils.showMessage("Alegeti meniul: ");
 
         ShowMessagesUtils.showMessage("Felul I");
-        int indexMenu1 = alegeElementDinMeniu(scanner, MenuItems.meniuFelulI());
-        System.out.println("indexMenu1 : " + indexMenu1);
+        alegeElementDinMeniu(scanner, MenuItems.meniuObiectFelulI());
 
         ShowMessagesUtils.showMessage("Felul II");
-        int indexMenu2 = alegeElementDinMeniu(scanner, MenuItems.meniuFelulII());
-        System.out.println("indexMenu2 : " + indexMenu2);
+        alegeElementDinMeniu(scanner, MenuItems.meniuObiectFelulII());
 
         ShowMessagesUtils.showMessage("Desert");
-        int indexDesert = alegeElementDinMeniu(scanner, MenuItems.meniuDesert());
-        System.out.println("indexDesert : " + indexDesert);
+        alegeElementDinMeniu(scanner, MenuItems.meniuObiectDesert());
 
-        /*
-        for(Integer key: MenuItems.meniuObiectFelulI().keySet()){
-            System.out.println(key + " . " + MenuItems.meniuObiectFelulI().get(key).getNume());
-        }
-        */
-
+        showChoises();
     }
 
-    private static int alegeElementDinMeniu(Scanner scanner, Map<String, Double> meniu) {
-        Set<String> keysMenu = meniu.keySet();
+    private static void alegeElementDinMeniu(Scanner scanner, Map<Integer, Mancare> meniu) {
         int indexMenu;
         do {
-            int i = 1;
-            for (String key : keysMenu) {
-                System.out.println(i + "." + key + ": " + meniu.get(key) + " RON");
-                i++;
+            for (Map.Entry<Integer, Mancare> entry : meniu.entrySet()) {
+                System.out.println(
+                        entry.getKey() + ". " + entry.getValue().getNume() + ", " + entry.getValue().getPret() + " RON");
             }
-            indexMenu = scanner.nextInt();
-        } while (indexMenu > keysMenu.size());
 
-        return indexMenu;
+            indexMenu = scanner.nextInt();
+        } while (indexMenu > meniu.size());
+        mancareaAleasa.add(meniu.get(indexMenu));
     }
 
+    private static void showChoises() {
+        double total = 0.0;
+        for (Mancare mancare : mancareaAleasa) {
+            ShowMessagesUtils.showMessage(mancare.getNume() + " , " + mancare.getPret() + " RON");
+            total += mancare.getPret();
+        }
+        ShowMessagesUtils.showMessage("Total : " + total);
 
-
+    }
 
 
 }

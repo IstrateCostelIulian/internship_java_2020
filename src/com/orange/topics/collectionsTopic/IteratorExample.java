@@ -11,15 +11,17 @@ public class IteratorExample {
         luniVara.add("Iulie");
         luniVara.add("August");
 
-        luniVara.get(2);
-        //luniVara.add(2, "Test");
+        System.out.println(luniVara.get(2));
+
+
+        luniVara.add(2, "Test");
 
         //DACA FACI MODIFICARE DE COMPONENTA LA NIVEL DE LISTA IN TIMPUL PARCURGERII ARUNCA :
         //Exception in thread "main" java.util.ConcurrentModificationException
-        /*for (String lunaVara : luniVara) {
+        for (String lunaVara : luniVara) {
             System.out.println(lunaVara);
-            luniVara.add(2, "Test");
-        }*/
+            //luniVara.add(2, "Test");
+        }
 
         System.out.println("------------------------------------");
 
@@ -27,7 +29,7 @@ public class IteratorExample {
         while (luniIterator.hasNext()) {
 
             System.out.println(luniIterator.next());
-            luniVara.remove(0);
+            //luniVara.remove(0);
 
         }
     }
